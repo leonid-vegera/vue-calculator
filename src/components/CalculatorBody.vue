@@ -156,6 +156,7 @@ export default {
       font-size: 2em;
       text-align: end;
       border: 1px solid transparent;
+      box-sizing: border-box;
 
       &::placeholder {
         color: #f2f2f2;
