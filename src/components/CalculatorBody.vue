@@ -97,7 +97,7 @@ export default {
         if (this.chosenOperation === '*' || this.chosenOperation === '/') {
           percentNumber = parseInt(percentValue) / 100
         }
-        this.result = eval(`${prevValue} ${this.chosenOperation} ${percentNumber}`);
+        this.result = new Function('return ' + prevValue + this.chosenOperation + percentNumber)();
       }
 
       switch (value) {
@@ -112,7 +112,7 @@ export default {
             percentHandler.call(this);
             break;
           }
-          this.result = eval(this.result);
+          this.result = new Function('return ' + this.result)();
           break;
         default:
           this.result = this.result + value;

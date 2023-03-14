@@ -11,6 +11,7 @@
     "deploy": "npm run build && gh-pages -d dist"
   },
   "dependencies": {
+    "@vue/reactivity": "^3.2.47",
     "sass": "^1.58.3",
     "vue": "^3.2.47"
   },
